@@ -1,0 +1,114 @@
+@import url('http://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and App Container */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image:url(todoimage.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color:steelblue;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    width: 400px;
+    height: auto;
+    text-align: center;
+}
+
+/* App Title */
+.app-title {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Input field and Add button */
+#todo-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#add-btn {
+    padding: 10px 15px;
+    background-color:darkcyan;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#add-btn:hover {
+    background-color:skyblue;
+}
+
+/* Todo List */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafafa;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li span {
+    flex: 1;
+    word-wrap: break-word;
+}
+
+li button {
+    background-color:yellowgreen;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 80px;
+    cursor: pointer;
+}
+
+li button:hover {
+    background-color:goldenrod;
+}
+
+/* Animation for adding new tasks */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+li {
+    animation: slideIn 0.3s ease-out;
+}
